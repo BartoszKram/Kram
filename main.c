@@ -313,7 +313,7 @@ void execute_state(trans_state *state){
                     break;
     default :
         forward();
-        change_speed(T10,T10);
+        change_speed(T9,T9);
     }
 }
 
