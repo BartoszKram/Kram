@@ -26,7 +26,7 @@
 #define BEG_SPEED 0 // wartośc początkowa prędkości kół
 uint16_t DEF_SPEED=2; // domyślna prędkośc kół
 int last_state;
-#define FOR_SPEED 10
+#define FOR_SPEED 4
 
 
 #define F1          0
@@ -243,16 +243,16 @@ void execute_state(trans_state *state){
     int tmp=calculate_state(state);
     switch(tmp){
                 case 4: //Jazda na wprost
-                case 14:
                 case 10:
+                case 14:
                 case 17:
                 case 21:
                 case 27:
                 case 29:
                 case 31:
-                	forward();
-                	change_speed(T10,T10);
-                	break;
+                    forward();
+                    change_speed(T10,T10);
+                    break;
                 case 2: //Delikatny zakręt w prawo
                 case 6:
                 case 11:
@@ -313,7 +313,7 @@ void execute_state(trans_state *state){
                     break;
     default :
         forward();
-        change_speed(T9,T9);
+        change_speed(T10,T10);
     }
 }
 
