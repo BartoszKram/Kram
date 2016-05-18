@@ -243,8 +243,11 @@ void execute_state(trans_state *state){
     int tmp=calculate_state(state);
     switch(tmp){
                 case 4: //Jazda na wprost
-                case 10:
                 case 14:
+                	forward();
+                	change_speed(T10,T10);
+                	break;
+                case 10:
                 case 17:
                 case 21:
                 case 27:
