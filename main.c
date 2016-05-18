@@ -26,7 +26,7 @@
 #define BEG_SPEED 0 // wartośc początkowa prędkości kół
 uint16_t DEF_SPEED=2; // domyślna prędkośc kół
 int last_state;
-#define FOR_SPEED 4
+#define FOR_SPEED 10
 
 
 #define F1          0
@@ -217,11 +217,11 @@ void change_speed(uint8_t left,uint8_t right){
 void execute_last_state(int last_state){
     if(last_state==1){
         right_reverse();
-        change_speed(T7,T7);
+        change_speed(T4,T4);
     }
     else if(last_state==0){
         right_forward();
-        change_speed(T7,T7);
+        change_speed(T4,T4);
     }
     else{
     	forward();
